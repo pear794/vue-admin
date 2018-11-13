@@ -1,2 +1,16 @@
 # vue-admin
-vue-cli3.0+element-ui生成一个后台通用模板
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
