@@ -9,6 +9,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.4.9",
+    "mockjs": "^1.0.1-beta3",
+    "save-dev": "^2.0.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -16,6 +18,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
     "@vue/cli-service": "^3.0.3",
+    "axios-mock-adapter": "^1.15.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.5.17"

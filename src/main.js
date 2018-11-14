@@ -9,7 +9,7 @@ import VueRouter from 'vue-router';
 import routes from './router'
 
 Vue.use(ElementUI, { locale })
-Vue.use(VueRouter) //踩坑
+Vue.use(VueRouter) //踩坑(忘了引入)
 
 Vue.config.productionTip = false
 Vue.prototype.axios = axios
@@ -31,6 +31,7 @@ router.beforeEach( (to, from, next) => {
     next()
   }
 })
+
 
 new Vue({
   router,
