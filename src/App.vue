@@ -4,9 +4,19 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
-    <router-view/>
+    <transition name="fade">
+       <router-view></router-view>
+    </transition>
   </div>
 </template>
+<script>
+  export default {
+	name: 'app',
+	components: {
+	}
+}
+</script>
+
 <style lang="stylus">
 #app
   font-family 'Avenir', Helvetica, Arial, sans-serif
