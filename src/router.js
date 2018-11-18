@@ -15,7 +15,16 @@ let routes = [
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      name : "导航一",
+      iconCls : "el-icon-message", //图标样式class
+      children : [
+        {
+          path : "index",
+          component : () => import('./pages/index/Index'),
+          name : "主页"
+        }
+      ]
     },
 
   ]
