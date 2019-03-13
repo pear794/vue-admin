@@ -3,11 +3,12 @@ import App from './App.vue'
 
 import store from './store'
 import ElementUI from 'element-ui'
+import '@/styles/reset.css'
 //import locale from 'element-ui/lib/locale/lang/en'
 import 'element-ui/lib/theme-chalk/index.css';
 //import axios from 'axios'
 import VueRouter from 'vue-router';
-import routes from './router'
+import routes from './router' //引入样式重置表
 import Mock from './mock' //引入mock模拟数据，实际开发应注释，会拦截axios
 
 Vue.use(ElementUI)
