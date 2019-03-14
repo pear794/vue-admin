@@ -35,7 +35,7 @@
         },
         methods : {
             collapes (){
-
+    
             },
             //用户点击退出操作
             logout (){
