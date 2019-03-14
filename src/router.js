@@ -11,7 +11,6 @@ let routes = [
     },
     {
       path: '/',
-      name: 'home',
       component: Home,
       name : "导航一",
       iconCls : "el-icon-message", //图标样式class
