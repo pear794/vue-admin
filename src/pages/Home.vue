@@ -120,6 +120,7 @@
 			handleSelect (){},
         },
         mounted (){
+			//获取用户数据
             this.getUserInfo();
         }
     }
