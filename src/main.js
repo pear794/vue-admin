@@ -4,7 +4,7 @@ import App from './App.vue'
 import store from './store'
 import ElementUI from 'element-ui'
 
-import '@/styles/reset.css'
+/* mport '@/styles/reset.css' */
 
 //import locale from 'element-ui/lib/locale/lang/en'
 import 'element-ui/lib/theme-chalk/index.css';
