@@ -23,3 +23,7 @@ vue version : 2.2.17
 vue-cli : 3.03
 element-ui : 2.4.9
 ```
+### 全局样式
+```
+全局样式都写在app.vue里面，可以修改
+```
