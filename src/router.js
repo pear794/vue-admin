@@ -16,7 +16,7 @@ let routes = [
       iconCls : "el-icon-message", //图标样式class
       children : [
         {
-          path : "index",
+          path : "/index",
           component : () => import('./pages/index/Index'),
           name : "主页"
         }

@@ -23,8 +23,9 @@
 		<el-col :span="24" class="main">
 			<aside :class="collapsed ? 'menu-collapsed' : 'menu-expanded'">
 				<!-- 导航菜单 -->
+				<!-- default-active只要和el-menu-item的index相等就会默认展开导航栏 -->
 				<el-menu 
-					:default-active="$router.path" 
+					:default-active="$route.path" 
 					close="el-menu-vertical-demo" 
 					@open="handleOpen" 
 					@close="handleClose" 
@@ -34,10 +35,26 @@
 				>
 					<template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
 						<el-submenu :key="index" :index="index+''" v-if="!item.leaf">
+							<!--一级导航栏 -->
 							<template slot="title"><i :class="item.iconCls"></i>{{item.name}}</template>
-							<el-menu-item v-for="child in item.children" :index="child.path" :key="child.path" v-if="!child.hidden">{{child.name}}</el-menu-item>
+							<!-- 二级导航栏 -->
+							<el-menu-item 
+								v-for="child in item.children" 
+								:index="child.path" 
+								:key="child.path" 
+								v-if="!child.hidden"
+							>
+								{{child.name}}
+							</el-menu-item>
 						</el-submenu>
-						<el-menu-item :key="index" v-if="item.leaf && item.children.length > 0" :index="item.children[0].path"><i :class="item.iconCls"></i>{{item.children[0].name}}</el-menu-item>
+						<el-menu-item 
+							:key="index" 
+							v-if="item.leaf && item.children.length > 0" 
+							:index="item.children[0].path"
+						>
+							<i :class="item.iconCls"></i>
+							{{item.children[0].name}}
+						</el-menu-item>
 					</template>
 				</el-menu>
 				<!--导航菜单-折叠后-->
@@ -62,7 +79,14 @@
 						</template>
 						<template v-else>
 							<li class="el-submenu">
-								<div class="el-submenu__title el-menu-item" style="padding-left: 20px;height: 56px;line-height: 56px;padding: 0 20px;" :class="$route.path==item.children[0].path?'is-active':''" @click="$router.push(item.children[0].path)"><i :class="item.iconCls"></i></div>
+								<div 
+									class="el-submenu__title el-menu-item" 
+									style="padding-left: 20px;height: 56px;line-height: 56px;padding: 0 20px;" 
+									:class="$route.path==item.children[0].path ? 'is-active':''" 
+									@click="$router.push(item.children[0].path)"
+								>
+									<i :class="item.iconCls"></i>
+								</div>
 							</li>
 						</template>
 					</li>
@@ -94,9 +118,9 @@
         data (){
             return {
                 sysName:'VUEADMIN',
-                collapsed : false,
-                sysUserAvatar : '',
-                sysUserName : '',
+                collapsed : false, //导航栏默认展开还是缩进
+                sysUserAvatar : '', //管理员的头像
+                sysUserName : '', //管理员的名字
             }
         },
         methods : {

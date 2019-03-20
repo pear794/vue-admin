@@ -14,7 +14,7 @@ import routes from './router' //引入样式重置表
 import Mock from './mock' //引入mock模拟数据，实际开发应注释，会拦截axios
 import 'font-awesome/css/font-awesome.min.css'
 //element-ui的扩展样式
-import './assets/theme/theme-darkblue/index.css'
+//import './assets/theme/theme-darkblue/index.css'
 
 Vue.use(ElementUI)
 
