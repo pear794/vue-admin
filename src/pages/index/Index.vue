@@ -42,7 +42,15 @@
 		<!--工具条-->
 		<el-col :span="24" class="toolbar">
 			<el-button type="danger" @click="batchRemove" :disabled="this.sels.length===0">批量删除</el-button>
-			<el-pagination layout="prev, pager, next" @current-change="handleCurrentChange" :page-size="20" :total="total" style="float:right;">
+			<!-- 分页器 -->
+			<el-pagination 
+				layout="prev, pager, next" 
+				@current-change="handleCurrentChange" 
+				:page-size="20" 
+				:total="total" 
+				style="float:right;"
+				background
+			>
 			</el-pagination>
 		</el-col>
 
@@ -221,12 +229,12 @@
 					if (valid) {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true;
-							//NProgress.start();
+							
 							let para = Object.assign({}, this.editForm);
 							para.birth = (!para.birth || para.birth == '') ? '' : util.formatDate.format(new Date(para.birth), 'yyyy-MM-dd');
 							editUser(para).then((res) => {
 								this.editLoading = false;
-								//NProgress.done();
+								
 								this.$message({
 									message: '提交成功',
 									type: 'success'
@@ -274,7 +282,7 @@
 				}).then(() => {
 					this.listLoading = true;
 					//NProgress.start();
-					let para = { ids: ids };
+					let para = { ids };
 					batchRemoveUser(para).then((res) => {
 						this.listLoading = false;
 						//NProgress.done();

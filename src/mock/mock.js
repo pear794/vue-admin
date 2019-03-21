@@ -94,7 +94,7 @@ export default {
             _Users = _Users.filter(u => !ids.includes(u.id))
             return new Promise( (resolve,reject) => {
                 setTimeout( () => {
-                    rersolve([200,{
+                    resolve([200,{
                         code : 200,
                         msg : "删除成功"
                     }])
@@ -104,7 +104,7 @@ export default {
 
         //编辑用户
         mock.onGet('/user/edit').reply( config => {
-            let { id,name,age,birth,sex } = config.params
+            let { id, name, addr, age, birth, sex } = config.params
             _Users.some(u => {
                 if (u.id === id) {
                     u.name = name;
@@ -116,6 +116,7 @@ export default {
                 }
             })
             return new Promise( (resolve,reject) => {
+                console.log(111);
                 setTimeout( () => {
                     resolve([200,{
                         code : 200,
