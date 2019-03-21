@@ -138,7 +138,7 @@
 				},
 				//编辑界面数据
 				editForm: {
-					id: 0,
+					id: 0, 
 					name: '',
 					sex: -1,
 					age: 0,
