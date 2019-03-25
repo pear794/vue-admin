@@ -23,6 +23,14 @@ Vue.use(VueRouter) //踩坑(忘了引入)
 //Vue.prototype.axios = axios //将axios挂载到vue原型上
 Mock.bootstrap();
 
+//引入富文本插件
+import VueQuillEditor from 'vue-quill-editor'
+
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+
+Vue.use(VueQuillEditor)
 
 
 //路由守卫

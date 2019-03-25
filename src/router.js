@@ -34,6 +34,20 @@ let routes = [
       ]
     },
     {
+        path : "/",
+        component : Home,
+        name : "",
+        iconCls : "el-icon-document",
+        leaf : true, //只有一个节点
+        children : [
+            {
+                path : "/editor",
+                component : () => import('../src/pages/editor/editor.vue'),
+                name : "富文本"
+            }
+        ]
+    },
+    {
         path : "*",
         hidden : true,
         redirect : { path : "/404" } //重定向

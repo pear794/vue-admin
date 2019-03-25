@@ -64,7 +64,7 @@
     .el-menu{ /* 父级导航 */
         background-color: #eef1f6 !important;
     }
-    .el-menu-item { /* 子集导航 */
+    .el-submenu .el-menu { /* 子集导航 */
         background-color: #e4e8f1 !important;
     }
 </style>
