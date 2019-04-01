@@ -48,6 +48,19 @@ let routes = [
         ]
     },
     {
+        path : "/",
+        component : Home,
+        name : "状态管理",
+        iconCls : "el-icon-loading",
+        children : [
+            {
+                path : "/vuex",
+                component : () => import('./pages/vuex/vuex.vue'),
+                name : "Vuex"
+            }
+        ]
+    },
+    {
         path : "*",
         hidden : true,
         redirect : { path : "/404" } //重定向
