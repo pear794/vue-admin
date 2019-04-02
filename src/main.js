@@ -15,8 +15,6 @@ import 'font-awesome/css/font-awesome.min.css'
 //element-ui的扩展样式
 //import './assets/theme/theme-darkblue/index.css'
 
-
-
 Vue.use(ElementUI)
 
 Vue.use(VueRouter) //踩坑(忘了引入)
