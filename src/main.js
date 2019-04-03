@@ -17,6 +17,7 @@ import 'font-awesome/css/font-awesome.min.css'
 
 Vue.use(ElementUI)
 
+
 Vue.use(VueRouter) //踩坑(忘了引入)
 
 //Vue.prototype.axios = axios //将axios挂载到vue原型上
