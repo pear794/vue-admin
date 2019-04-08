@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "echarts": "^4.2.1",
     "element-ui": "^2.4.9",
     "font-awesome": "^4.7.0",
     "mockjs": "^1.0.1-beta3",

@@ -61,6 +61,19 @@ let routes = [
         ]
     },
     {
+        path : "/",
+        component : Home,
+        name : "Charts",
+        iconCls : "fa fa-bar-chart",
+        children : [
+            {
+                path : "/charts",
+                component : () => import('./pages/charts/charts.vue'),
+                name : "Charts"
+            }
+        ]
+    },
+    {
         path : "*",
         hidden : true,
         redirect : { path : "/404" } //重定向
