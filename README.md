@@ -21,18 +21,18 @@ npm run build
 ```
 ### 演示地址
 ```
-`www.buaili.com`
+* [演示地址](http://www.buaili.com)
 ```
 ### 全局样式
 ```
-全局样式都写在app.vue里面，可以修改
+*全局样式都写在app.vue里面，可以修改
 ```
 ### 优化
 ```
 1.插件版本老化，新安装插件可能会引起冲突
-    vue version : 2.5.17
-    vue-cli : 3.03
-    element-ui : 2.4.9
+    * vue version : 2.5.17
+    * vue-cli : 3.03
+    * element-ui : 2.4.9
 2.修复导航栏缩放边缘空白问题 
 ```
 ### 膜法
