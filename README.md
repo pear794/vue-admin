@@ -14,7 +14,10 @@ npm run serve
 ```
 npm run build
 ```
-
+### 演示地址
+```
+www.buaili.com
+```
 ### 初衷
 ```
 很感谢制作这个框架的人，当初项目需要一个后台模板，通过百度找到了这款vue + element的模板，但是在使用的过程中，发现了几个bug，
