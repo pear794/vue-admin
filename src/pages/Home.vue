@@ -21,46 +21,44 @@
             </el-col>
         </el-col>
 		<el-col :span="24" class="main">
-			<aside :class="collapsed ? 'menu-collapsed' : 'menu-expanded'">
-				<!-- 导航菜单 -->
-				<!-- default-active只要和el-menu-item的index相等就会默认展开导航栏 -->
-				<el-menu 
-					:default-active="$route.path" 
-					class="el-menu-vertical-demo" 
-					router  
-					@open="handleOpen" 
-					@close="handleClose" 
-					@select="handleSelect"
-					:collapse="collapsed"
-				>
-					<template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
-						<el-submenu :key="index" :index="index+''" v-if="!item.leaf">
-							<!--一级导航栏 -->
-							<template slot="title">
-								<i :class="item.iconCls"></i>
-								<span slot="title">{{item.name}}</span>
-							</template>
-							<!-- 二级导航栏 -->
-							<el-menu-item 
-								v-for="child in item.children" 
-								:index="child.path" 
-								:key="child.path" 
-								v-if="!child.hidden"
-							>
-								<!-- <span slot="title"> -->{{child.name}}<!-- </span> -->
-							</el-menu-item>
-						</el-submenu>
-						<el-menu-item 
-							:key="index" 
-							v-if="item.leaf && item.children.length > 0" 
-							:index="item.children[0].path"
-						>
+			<!-- 导航菜单 -->
+			<!-- default-active只要和el-menu-item的index相等就会默认展开导航栏 -->
+			<el-menu 
+				:default-active="$route.path" 
+				class="el-menu-vertical-demo" 
+				router  
+				@open="handleOpen" 
+				@close="handleClose" 
+				@select="handleSelect"
+				:collapse="collapsed"
+			>
+				<template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
+					<el-submenu :key="index" :index="index+''" v-if="!item.leaf">
+						<!--一级导航栏 -->
+						<template slot="title">
 							<i :class="item.iconCls"></i>
-							<span slot="title">{{item.children[0].name}}</span>
+							<span slot="title">{{item.name}}</span>
+						</template>
+						<!-- 二级导航栏 -->
+						<el-menu-item 
+							v-for="child in item.children" 
+							:index="child.path" 
+							:key="child.path" 
+							v-if="!child.hidden"
+						>
+							{{child.name}}
 						</el-menu-item>
-					</template>
-				</el-menu>
-			</aside>
+					</el-submenu>
+					<el-menu-item 
+						:key="index" 
+						v-if="item.leaf && item.children.length > 0" 
+						:index="item.children[0].path"
+					>
+						<i :class="item.iconCls"></i>
+						<span slot="title">{{item.children[0].name}}</span>
+					</el-menu-item>
+				</template>
+			</el-menu>
 			<section class="content-container">
 				<div class="grid-content bg-purple-light">
 					<el-col :span="24" class="breadcrumb-container">
@@ -181,7 +179,7 @@
 				width:230px;
 			}
 			.logo-collapse-width{
-				width:64px
+				width:65px
 			}
 			.tools{
 				padding: 0px 23px;
@@ -249,7 +247,11 @@
 		}
 	}
 	.el-menu-vertical-demo:not(.el-menu--collapse) {
-		width: 230px;
+		width: 229px;
 		min-height: 400px;
+	}
+	/* 给logo添加过度 */
+	.logo-collapse-width,{
+		transition : all .3s ease-in-out;
 	}
 </style>
