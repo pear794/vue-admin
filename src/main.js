@@ -59,8 +59,3 @@ new Vue({
 }).$mount('#app') 
 
 
-
-
-
-
-
