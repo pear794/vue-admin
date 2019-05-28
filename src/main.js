@@ -25,7 +25,7 @@ Mock.bootstrap();
   
 //引入富文本插件
 import VueQuillEditor from 'vue-quill-editor'
-
+//引入富文本样式
 import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
@@ -57,11 +57,6 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app') 
-
-
-
-
-
 
 
 
