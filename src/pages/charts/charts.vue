@@ -150,6 +150,7 @@
                         subtext: '纯属虚构',
                         x: 'center'
                     },
+                    color: ['#c20','#0f0', '#000', '#f00', '#f60',],
                     tooltip: {
                         trigger: 'item',
                         formatter: "{a} <br/>{b} : {c} ({d}%)"
