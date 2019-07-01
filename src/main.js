@@ -22,7 +22,7 @@ Vue.use(VueRouter) //踩坑(忘了引入)
 
 //Vue.prototype.axios = axios //将axios挂载到vue原型上
 Mock.bootstrap();
-  
+
 //引入富文本插件
 import VueQuillEditor from 'vue-quill-editor'
 //引入富文本样式
@@ -30,7 +30,7 @@ import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 
-Vue.use(VueQuillEditor) 
+Vue.use(VueQuillEditor)
 
 
 //路由守卫
@@ -55,8 +55,10 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
-  render: h => h(App) 
-}).$mount('#app') 
+  render: h => h(App)
+}).$mount('#app')
+
+
 
 
 
