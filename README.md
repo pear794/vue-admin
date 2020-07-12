@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-12 15:17:37
+ * @LastEditTime: 2020-07-12 16:41:10
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \vue-admin\README.md
+--> 
 # vue-admin
 
 ## Project setup
@@ -21,7 +29,7 @@ npm run build
 ```
 ### 演示地址
 
-* [演示地址:http://www.buaili.com](http://www.buaili.com)
+* [演示地址:http://www.buaili.com](http://admin.buaili.com.com)
 
 ### 全局样式
 

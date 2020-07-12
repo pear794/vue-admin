@@ -12,7 +12,6 @@
     "element-ui": "^2.4.9",
     "font-awesome": "^4.7.0",
     "mockjs": "^1.0.1-beta3",
-    "save-dev": "^2.0.0",
     "vue": "^2.5.17",
     "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.0.1",
