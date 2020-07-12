@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-12 15:17:37
- * @LastEditTime: 2020-07-12 16:41:10
- * @LastEditors: your name
+ * @LastEditTime: 2020-07-12 16:47:40
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admin\README.md
 --> 
@@ -29,7 +29,7 @@ npm run build
 ```
 ### 演示地址
 
-* [演示地址:http://www.buaili.com](http://admin.buaili.com.com)
+* [演示地址:http://admin.buaili.com](http://admin.buaili.com)
 
 ### 全局样式
 
